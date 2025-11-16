@@ -1,0 +1,5 @@
+{
+  "name": "KielTech",
+  "description": "A modern, AI-powered portfolio and project idea generator for KielTech, showcasing innovative technology solutions and generating creative project ideas using the Gemini API.",
+  "requestFramePermissions": []
+}

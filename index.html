@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KielTech - Innovative Technology Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class', // Enable class-based dark mode
+        theme: {
+          extend: {
+            colors: {
+              // Light theme
+              background: '#F8F9FA',
+              foreground: '#212529',
+              card: '#FFFFFF',
+              'muted-foreground': '#6C757D',
+              primary: '#007BFF',
+              'primary-foreground': '#FFFFFF',
+              border: '#DEE2E6',
+              
+              // Dark theme
+              'k-primary': '#0D1B2A',      // background
+              'k-secondary': '#1B263B',    // card
+              'k-accent': '#778DA9',      // primary accent
+              'k-muted': '#415A77',       // muted foreground
+              'k-foreground': '#E0E1DD',   // foreground
+              'k-border': '#415A77',
+            },
+            animation: {
+              'fade-in-up': 'fadeInUp 0.5s ease-out forwards',
+              'gradient': 'gradient 15s ease infinite',
+            },
+            keyframes: {
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+               gradient: {
+                '0%': { backgroundPosition: '0% 50%' },
+                '50%': { backgroundPosition: '100% 50%' },
+                '100%': { backgroundPosition: '0% 50%' },
+              },
+            },
+          }
+        }
+      }
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      .bg-animated-gradient {
+        background: linear-gradient(-45deg, #0D1B2A, #1B263B, #415A77);
+        background-size: 400% 400%;
+      }
+      #preview-iframe {
+        border: 1px solid #415A77; /* k-border */
+        border-radius: 0.5rem;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.29.1",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-background dark:bg-k-primary text-foreground dark:text-k-foreground">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
